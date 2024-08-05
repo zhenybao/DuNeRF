@@ -1,0 +1,236 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta name="description"
+        content="DuNeRF">
+  <meta name="keywords" content="Reconstruction, Rendering, Neural radiance field, Indoor scene">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DuNeRF</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    
+    gtag('js', new Date());
+    
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+	<link rel="stylesheet" href="./static/css/style.css">
+	<link rel="stylesheet" href="./static/css/css">
+	<link rel="stylesheet" href="./static/css/font-awesome.min.css">
+  <style id="ar94e88e2a9dstyle">
+    .ar94e88e2a9dhidden{ position:absolute !important; opacity:0 !important; pointer-events:none !important}
+</style>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link" style="font-size: 18px;">
+          PCL3DV Reasearch
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://zhenybao.github.io/LoopSparseGS/" target="_blank">
+            LoopSparseGS
+          </a>
+          <a class="navbar-item" href="https://github.com/pcl3dv/OV-NeRF" target="_blank">
+            OV-NeRF
+          </a>
+          <a class="navbar-item" href="https://gbliao.github.io/CLIP-GS.github.io" target="_blank">
+            CLIP-GS
+          </a>
+          <a class="navbar-item" href="https://github.com/pcl3dv/PSAvatar" target="_blank">
+            PS-Avatar
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">DuNeRF (ACMMM' 24)</h1>
+          <h1 class="title is-1 publication-title"; style="font-size: 40px;">3D Reconstruction and New View Synthesis of Indoor 
+            Environments based on a Dual Neural Radiance Field</h1>
+            <h1 class="title is-1 publication-title"; style="font-size: 40px;"></h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a>Zhenyu Bao</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a>Guibiao Liao</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a>Zhongyuan Zhao</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a>Kanglin Liu</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a>Qing Li</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a>Guoping Qiu</a><sup>3</sup>,
+            </span>
+          </div>
+
+
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Peking University,</span>
+            <span class="author-block"><sup>2</sup>Pengcheng Laboratory,</span>
+            <span class="author-block"><sup>3</sup>University of Nottingham</span>
+          </div>
+    
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/2401.14726" target="_blank"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2401.14726" target="_blank"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/pcl3dv/DuNeRF" target="_blank"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <span class="link-block">
+                <a class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a>
+            </div>
+    
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!-- <br>
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="./static/images/teaser.png" alt="">
+    </div>
+  </div>
+</section>
+  </div>
+</section> -->
+
+
+  <!-- <div class="container is-max-desktop"> -->
+    <div class="figure-caption" style="width: 50%">
+      <h2 class="title is-3">Overview</h2>
+      <p style="font-size: 18px;">
+        Simultaneously achieving 3D reconstruction and novel view synthesis for indoor environments has widespread applications 
+        but is technically very challenging. State-of-the-art methods based on implicit neural functions can achieve 
+        excellent 3D reconstruction results, but their performances on new view synthesis can be unsatisfactory. 
+        The exciting development of neural radiance field (NeRF) has revolutionized novel view synthesis, however, 
+        NeRF-based models can fail to reconstruct clean geometric surfaces. 
+        We have developed a dual neural radiance field (Du-NeRF) to simultaneously achieve high-quality geometry reconstruction and view rendering. Du-NeRF contains two geometric fields, one derived from the SDF field to facilitate geometric reconstruction and the other derived from the density field to boost new view synthesis. One of the innovative features of Du-NeRF is that it decouples a view-independent component from the density field and uses it as a label to supervise the learning process of the SDF field. This reduces shape-radiance ambiguity and enables geometry and color to benefit from each other during the learning process. Extensive experiments demonstrate that Du-NeRF can significantly improve the performance of novel view synthesis and 3D reconstruction for indoor environments and it is particularly effective in constructing areas containing fine geometries that do not obey multi-view color consistency.
+      </p>
+      <br>
+      <img src="./static/images/teaser.png" alt="">
+  </div>
+  <!-- </div> -->
+  </div>
+</section>
+
+
+
+<div class="hr"></div>
+<!-- <section class="section" id="BibTeX"> -->
+  <!-- <div class="container is-max-desktop content"> -->
+  <div class="figure-caption" style="width: 60%">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{bao20243d,
+      title={3D Reconstruction and New View Synthesis of Indoor Environments based on a Dual Neural Radiance Field},
+      author={Bao, Zhenyu and Liao, Guibiao and Zhao, Zhongyuan and Liu, Kanglin and Li, Qing and Qiu, Guoping},
+      journal={arXiv preprint arXiv:2401.14726},
+      year={2024}
+    }
+</code></pre>
+  </div>
+<!-- </section> -->
+
+<br>
+<footer>
+<div class="figure-caption" style="width: 60%">
+  <!-- <h2 class="title">Acknowledgement</h2> -->
+  <h3 class="title">Acknowledgement</h3>
+  <p style="font-size: 18px;">
+    The website template is borrowed from 
+    <a rel="license" href="https://github.com/nerfies/nerfies.github.io" target="_blank">Nerfies</a>. 
+  </p>
+  <!-- style="color: #4286f4;" 蓝色 -->
+</div>
+</footer>
+
+</body>
+</html>
